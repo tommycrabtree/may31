@@ -25,5 +25,6 @@ app.UseStaticFiles();
 app.UseCors(builder => builder.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://localhost:4200"));
 
 app.MapControllers();
+app.MapFallbackToController("Index", "Fallback");
 
 app.Run();
